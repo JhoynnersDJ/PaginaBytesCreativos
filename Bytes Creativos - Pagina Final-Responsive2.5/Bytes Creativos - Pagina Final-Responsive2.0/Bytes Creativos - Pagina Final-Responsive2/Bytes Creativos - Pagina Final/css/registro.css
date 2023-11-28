@@ -1,0 +1,138 @@
+@import url(header.css);
+@import url(footer.css);
+*{
+        padding: 0;
+        margin: 0;
+        font-family: Poppins;
+        font-weight: Regular;
+        
+}
+.register{
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: url("../img/contenido/tecnologia1.jpg");
+    opacity: 1;
+    font-size: 14px;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(3, 151, 214, 0.596); /* Cambia el valor de transparencia según sea necesario */
+    
+}
+.container{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px 0 15px;
+    margin-top: 90px;
+    
+}
+.top span{
+    color: #fff;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0 15px 0;
+}
+
+.top a{
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    margin-left: 5px;
+    text-decoration: none;
+}
+
+
+.top h1{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+    margin-top: -20px;
+    font-weight: 600;
+}
+
+.input-field .input{
+    height: 45px;
+    width: 87%;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 19px;
+    padding: 0 0 0 45px;
+    background: rgba(255, 255, 255, 0.13);
+    outline: none;
+    font-weight: 500;
+}
+i{
+    position: relative;
+    top: -33px;
+    left: 17px;
+    color: #fff;
+}
+::-webkit-input-placeholder{
+    color: #fff;
+}
+.submit{
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    height: 45px;
+    outline: none;
+    width: 100%;
+    color: black;
+    background: rgba(255,255,255,0.7);
+    cursor: pointer;
+    transition: .3s ;
+    font-weight: 600;
+}
+.submit:hover{
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+    background: rgba(255,255,255,0.9);
+}
+.two-col{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #fff;
+    font-size: small;
+    margin-top: 10px;
+}
+.one{
+    display: flex;
+}
+label a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.two{
+    font-size: 17px;
+}
+@media (max-width: 767px) {
+
+    .header__logo {
+        max-width: 100px;
+        margin-left: 20px;
+  }
+
+}
+
+ /*Responsive Landscape*/
+ @media (max-width: 768px) and (orientation: landscape) {
+    .container{
+        margin-top: 110px;
+    }
+    .two-col{
+        margin-bottom: 10px;
+        margin-right: 22px;
+    }
+ }

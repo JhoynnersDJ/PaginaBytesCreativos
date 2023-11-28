@@ -1,0 +1,450 @@
+@import url(header2.css);
+@import url(footer.css);
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Poppins;
+  }
+
+  /* Hero */
+.hero-section {
+  margin-top: 80px;
+  margin-bottom: -130px;
+  position: relative;
+  overflow: hidden;
+  @media (max-width: 768px) {
+    margin-bottom: 0px;
+  }
+}
+
+.hero-container {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 476px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  background: url("../img/contenido/heroabout.png") center bottom no-repeat;
+  background-size: cover;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: #0397d6ea;
+  opacity: 0.8; /* Cambio en la opacidad para oscurecer la imagen */
+}
+
+
+.hero__logo,
+.hero-title,
+.hero-subtitle,
+.hero-message,
+.hero-button {
+  color: #fff; /* Cambio en el color del texto a blanco */
+  text-align: center;
+  font-family: Poppins;
+  z-index: 3;
+  margin: 0;
+  opacity: 0;
+}
+
+
+
+.hero-title {
+  font-weight: 300;
+  font-size: 70px;
+  line-height: 0.9; /* Cambio en la altura de línea */
+  opacity: 0;
+  animation: slide-in-left 1s 1s forwards;
+  margin-top: 113px;
+        /* Nuevas propiedades para tamaños de pantalla más pequeños */
+        @media (max-width: 768px) {
+          font-size: 40px;
+          line-height: 1;
+        }
+}
+
+.hero-subtitle {
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 0.9;
+  animation: slide-in-left 1s 1.5s forwards;
+  margin-top: 59;
+        /* Nuevas propiedades para tamaños de pantalla más pequeños */
+        @media (max-width: 768px) {
+          font-size: 40px;
+          line-height: 1;
+        }
+}
+
+.hero-message {
+  font-weight: medium;
+  font-size: 21px;
+  animation: slide-in-left 1s 2s forwards;
+  margin-top: 11px;
+        /* Nuevas propiedades para tamaños de pantalla más pequeños */
+        @media (max-width: 768px) {
+          font-size: 16px;
+        }
+}
+
+.hero-button {
+  background-color: #56B14B; /* Cambio en el color de fondo del botón */
+  border-radius: 7px;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #fff; /* Cambio en el color del texto del botón a blanco */
+  margin-top: 9px;
+  animation: slide-in-bottom 2.5s 2.5s forwards;
+  width: 184px;
+  height: 42;
+  @media (max-width: 768px) {
+    font-size: 10px;
+    
+  }
+}
+
+.hero-button:hover {
+  background-color: #7fc277;
+}
+
+.hero__logo{
+  margin-top: 35px;
+  z-index: 4;
+  animation: slide-in-bottom 2.5s 2.5s forwards;
+}
+
+.hero__logo img {
+  height: 45.48px;
+  @media (max-width: 768px) {
+    height: 30px;
+}
+  }
+
+  /* Animacion Hero */
+
+  @keyframes slide-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(-50%);
+    }
+    to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  }
+  
+  @keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  }
+  
+  @keyframes slide-in-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+
+  /*Iconos Razones*/
+
+  }
+  .grid-razones {
+    padding: 20px;
+    animation: fadein 0.7s ease-in-out forwards;
+    margin-top: 120px;
+    margin-bottom: 163px;
+  }
+  
+  .section-title {
+    font-size: 34px;
+    font-weight: 300;
+    line-height: 51px;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(-70px);
+    transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
+  }
+  
+  .section-title.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .section-subtitle {
+    color: #0396D6;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 51px;
+    margin-top: 0;
+    text-align: center;
+    transform: translateX(-70px);
+    transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
+    opacity: 0;
+    margin-top: -15px;
+  }
+  
+  .section-subtitle.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch; /* Alinea los elementos estirándolos verticalmente */
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
+    align-content: center;
+  }
+  
+  .grid-container.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .grid-item {
+    flex-basis: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+  
+    @media(max-width:764px) {
+        flex-basis: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+      }
+    }
+  
+  
+  
+  .grid-item img {
+    width: 120px;
+    height: 120px;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .grid-item img:hover {
+    transform: scale(1.2);
+  }
+  
+  .grid-item h4 {
+    margin-top: 10px;
+    font-size: 21px;
+    font-weight: 600;
+  }
+  
+  .grid-item h5 {
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 100;
+  }
+  
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .grid-container.show {
+    transition-delay: 0.7s;
+  }
+  
+  h2.show {
+    transition-delay: 0s;
+  }
+  /*Vision*/
+
+  .vision-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-top: 30px;
+    margin-top: 0;
+  }
+  
+  .vision-section {
+    position: relative;
+    background-color: #0397d6ea;
+    height:50vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+  }
+  
+  .vision-section img {
+    width: 50%;
+    height: auto;
+    opacity: 0.7;
+  }
+  
+  .vision-text {
+    width: 100%;
+    text-align: center;
+    color: white;
+  }
+  button{ 
+  background-color: #56B14B;
+  color: #fff;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  border: none;
+  border-radius: 7px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+/*Temas*/
+.temas{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+ }   
+ .temas h3 {
+  font-size: 34px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #0396D6;
+  line-height: 1;
+  margin-top: -12px;
+}
+.temas h2 {
+  font-size: 34px;
+  font-weight: 300;
+  line-height: 2;
+}
+  /*Talleres*/
+  .lista-contenedor{
+    padding: 50px;
+    padding-top: 5px    ;
+  }
+  .lista {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  .lista li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  .lista li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    background-color: #0396D6;
+    border-radius: 50%;
+  }
+
+
+
+  /*DISEÑO RESPONSIVE*/
+
+  @media (max-width: 768px) {
+
+    /* Item Razones*/
+    .grid-razones{
+      margin-top: 10px;
+      padding-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    /*Vision*/
+    .vision-container img{
+      display: none;
+    }
+
+    .vision-text p{
+    font-size: 17px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    }
+    .vision-text{
+      height: 100%;
+      margin-top: 60px;
+    }
+    .vision-section{
+      background: linear-gradient(to right, #0397d6ea, #32738fea);
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+      color: #ffffff;
+      padding: 20px;
+    }
+    button{
+      margin-top: 0;
+    }
+
+    /*Talleres*/
+    .temas{
+      flex-direction: column;
+    }
+    .temas h2{
+      font-size: 28px;
+    }
+    .temas h3{
+      font-size: 28px;
+    } 
+    
+}
+
+ /*Responsive Landscape*/
+ @media (max-width: 768px) and (orientation: landscape) {
+    .vision-text{
+      margin-top: 0;
+    }
+    .vision-container{
+      padding: 10px;
+    }
+ }

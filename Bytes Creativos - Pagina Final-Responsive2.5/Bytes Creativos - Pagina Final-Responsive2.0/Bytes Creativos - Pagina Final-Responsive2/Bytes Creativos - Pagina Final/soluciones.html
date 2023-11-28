@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+        <link href="./css/soluciones.css" rel="stylesheet" />
+        <title>Bytes Creativos</title>
+    </head>
+    <body>
+      <!-- Header -->
+      <header class="header">
+        <div class="header__logo">
+          <a href="index.php">
+            <img src="img/contenido/Logo color.svg" alt="Logo de Bytes">
+          </a>
+        </div>
+        <img src="img/iconos/hamburguesa-azul.png" class="hamburguesa" id="icono" onclick="toggleMenu()" id="iconoHamburguesa">
+        <nav class="header__links">
+            <a href="about.html">Quiénes somos</a> 
+            <a href="soluciones.html">Soluciones</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="Asesorias.html">Asesorías</a>
+            <a href="Capacitacion.html">Capacitación</a>
+            <a href="contact.html">Contáctenos</a>
+        </nav>
+        <a href="login.html" class="header__button"> Inicia Sesión</a>
+        <div class="menu" id="menuDesplegable">
+          <img src="img/iconos/close.png" class="cerrar" onclick="toggleMenu()">
+          <a href="about.html"><img src="img/iconos/plus.png" alt="Más" class="icono"> Quiénes somos</a>
+          <a href="soluciones.html"><img src="img/iconos/plus.png" alt="Más" class="icono"> Soluciones</a>
+          <a href="servicios.html"><img src="img/iconos/plus.png" alt="Más" class="icono"> Servicios</a>
+          <a href="Asesorias.html"><img src="img/iconos/plus.png" alt="Más" class="icono"> Asesorías</a>
+          <a href="Capacitacion.html"><img src="img/iconos/plus.png" alt="Más" class="icono"> Capacitación</a>
+          <a href="contact.html"><img src="img/iconos/plus.png" alt="Más" class="icono"> Contáctenos</a>
+          <a href="login.html"> <img src="img/iconos/plus.png" alt ="Más" class="icono">Iniciar Sesión</a>
+        </div>
+      </header>
+          <!-- HeroAbout -->
+          <div class="hero-section">
+            <div class="hero-container">
+              <div class="hero-image"></div>
+              <span class="hero-title">Hacemos que la tecnología</span>
+              <span class="hero-subtitle">sea un potencial de tú negocio</span>
+              <span class="hero-message">Configuramos soluciones tecnologicas integrales</span>
+              <div class="hero-button">Cónoce más...</div>
+              <div class="hero__logo">
+                <img src="img/contenido/logoomnitet.png" alt="Logo de Omnitet">
+              </div>
+            </div>
+          </div>
+          <!-- Quienes Somos -->
+          <section class="sobre-nosotros">
+            <div class="nosotros-columna-imagen">
+              <img src="img/contenido/quienessomos.png" alt="Imagen de nuestro equipo">
+            </div>
+            <div class="nosotros-columna-texto">
+              <h2>Configuramos</h2>
+              <h3>soluciones tecnológicas</h3>
+              <p>Hacemos que la tecnología sea un potenciador 
+                del negocio de nuestros clientes. Configuramos 
+                soluciones tecnológicas integrales, acordes al 
+                presupuesto y al alcance esperado</p>
+            </div>
+          </section>
+          <!-- Suscribete -->
+          <section class="parallax">
+            <div class="parallax-bg"></div>
+            <div class="parallax-content">
+              <div class="columns">
+                <div class="left-column">
+                  <h2>Regístrate</h2>
+                </div>
+                <div class="right-column">
+                  <h2>Desarrollamos soluciones</h2>
+                  <h3>Tecnológicas para empresas</h3>
+                  <div class="form-container left-align">
+                    <input type="email" placeholder="Correo electrónico" class="input-email" />
+                    <input type="submit" value="Enviar" class="input-submit" />
+                    <label class="input-check">
+                      <input type="checkbox" class="inputCheck"/>
+                      <p class="texto-check">Acepto recibir a mi correo electrónico toda la información, actualizaciones y novedades.</p>
+
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <!-- Soluciones -->
+          <div class="soluciones-head">
+            <h1>Nuestras <div class="azul">Herramientas</div></h1>
+            <p>Este es un párrafo de 18 palabras.</p>
+          </div>    
+            <div class="solutions-container">
+              <div class="solution">
+                <div class="solution-img">
+                  <img src="img/contenido/imagen_4.png" alt="Herramienta 1">
+                  <div class="overlay1"></div>
+                </div>
+                <div class="solution-content cont1">
+                  <h2>Título Herramienta 1  </h2>
+                  <p>Texto Herramienta 1 Lorem ipsum dolor sit amet consectetur,  elit. Velit nemo distinctio</p>
+                </div>
+              </div>
+              
+              <div class="solution">
+                <div class="solution-content cont2">
+                  <h2>Título Herramienta 2</h2>
+                  <p>Texto Herramienta 2 Lorem ipsum dolor sit amet consectetur,  elit. Velit nemo distinctio</p>
+                </div>
+                <div class="solution-img">
+                  <img src="img/contenido/imagen_4.png" alt="Herramienta 2">
+                  <div class="overlay2"></div>
+                </div>
+              </div>
+              <div class="solution">
+                <div class="solution-img">
+                  <img src="img/contenido/imagen_4.png" alt="Herramienta 1">
+                  <div class="overlay3"></div>
+                </div>
+                <div class="solution-content cont3">
+                  <h2>Título Herramienta 1</h2>
+                  <p>Texto Herramienta 1 Lorem ipsum dolor sit amet consectetur,  elit. Velit nemo distinctio</p>
+                </div>
+              </div>
+              
+              <div class="solution">
+                <div class="solution-content cont4">
+                  <h2>Título Herramienta 2</h2>
+                  <p>Texto Herramienta 2 Lorem ipsum dolor sit amet consectetur,  elit. Velit nemo distinctio</p>
+                </div>
+                <div class="solution-img">
+                  <img src="img/contenido/imagen_4.png" alt="Herramienta 2">
+                  <div class="overlay4"></div>
+                </div>
+              </div>
+              <div class="solution">
+                <div class="solution-img">
+                  <img src="img/contenido/imagen_4.png" alt="Herramienta 1">
+                  <div class="overlay5"></div>
+                </div>
+                <div class="solution-content cont5">
+                  <h2>Título Herramienta 1</h2>
+                  <p>Texto Herramienta 1 Lorem ipsum dolor sit amet consectetur,  elit. Velit nemo distinctio</p>
+                </div>
+              </div>
+              
+              <div class="solution">
+                <div class="solution-content cont6">
+                  <h2>Título Herramienta 2</h2>
+                  <p>Texto Herramienta 2 Lorem ipsum dolor sit amet consectetur,  elit. Velit nemo distinctio</p>
+                </div>
+                <div class="solution-img">
+                  <img src="img/contenido/imagen_4.png" alt="Herramienta 2">
+                  <div class="overlay6"></div>
+                </div>
+              </div>
+              <div class="solution">
+                <div class="solution-img">
+                  <img src="img/contenido/imagen_4.png" alt="Herramienta 1">
+                  <div class="overlay7"></div>
+                </div>
+                <div class="solution-content cont7">
+                  <h2>Título Herramienta 1</h2>
+                  <p>Texto Herramienta 1 .solution-img.solution-img.solution-img  </p>
+                </div>
+              </div>
+              
+              <div class="solution">
+                <div class="solution-content cont8">
+                  <h2>Título Herramienta 2</h2>
+                  <p>Texto Herramienta 2 Lorem ipsum dolor sit amet consectetur,  elit. Velit nemo distinctio</p>
+                </div>
+                <div class="solution-img">
+                  <img src="img/contenido/imagen_4.png" alt="Herramienta 2">
+                  <div class="overlay8"></div>
+                </div>
+              </div>
+              <div class="solution">
+                <div class="solution-img">
+                  <img src="img/contenido/imagen_4.png" alt="Herramienta 1">
+                  <div class="overlay9"></div>
+                </div>
+                <div class="solution-content cont9">
+                  <h2>Título Herramienta 1</h2>
+                  <p>Texto Herramienta 1 Lorem ipsum dolor sit amet consectetur,  elit. Velit nemo distinctio</p>
+                </div>
+              </div>
+            </div>
+          
+          </section>
+          
+          
+          
+                <!-- Footer -->
+                <footer class="footer-container">
+                    <div class="footer-content-container">
+                      <div class="row">
+                        <div class="footer-column footer-logo">
+                          <img src="img/contenido/logobytes.png"Logo de la empresa">
+                        </div>
+                        <div class="footer-column footer-links">
+                          <ul>
+                            <li><a href="#">Quienes somos</a></li>
+                            <li><a href="#">Soluciones</a></li>
+                            <li><a href="#">Servicios</a></li>
+                            <li><a href="#">Asesoría</a></li>
+                            <li><a href="#">Capacitación</a></li>
+                            <li><a href="#">Contacto</a></li>
+                          </ul>
+                        </div>
+                        <div class="footer-column footer-contact-info">
+                          <p>Av. Rómulo Gallegos, Ed. Pascal, Las Mercedes, Cachao, Caracas - Venezuela</p>
+                          <p>info@bytescreativos.net</p>
+                          <p>+58 (0424) 186.4951</p>
+                          <p>+58 (0212) 314.3265</p>
+                        </div>
+                        <div class="footer-column footer-sponsor-image">
+                          <img src="img/contenido/logoomnitet.png" alt="Imagen de la empresa">
+                        </div>
+                      </div>
+                    </div>
+                  </footer>
+                  
+                  
+                <!-- JavaScript -->
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <script src="Js/header-footer.js"></script>
+                <script src="js/about.js"></script>
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <!-- 
+
+                  Bot
+                <script>
+                  //To minimise the height of chatbox
+                  $(document).ready(function() {
+                      window.addEventListener('dfMessengerLoaded', function (event) {
+                      $r1 = document.querySelector("df-messenger");
+                      $r2 = $r1.shadowRoot.querySelector("df-messenger-chat");
+                      $r3 = $r2.shadowRoot.querySelector("df-messenger-user-input"); //for other mods
+                      var sheet = new CSSStyleSheet;
+                      // manage box height from here
+                      sheet.replaceSync( `div.chat-wrapper[opened="true"] { height: 450px }`);
+                      $r2.shadowRoot.adoptedStyleSheets = [ sheet ];
+                      });
+                  });
+              </script>
+
+                <div style="max-width: 510px; margin: 0 auto;">
+                  <df-messenger
+                    intent="Soporte"
+                    chat-title="AntQueen"
+                    agent-id="8403c874-a56b-421e-ab1a-247989be63e9"
+                    language-code="es"
+                    chat-icon="https://galsecure.com/img/Hormiga%20blanca.png"
+                  ></df-messenger>
+                </div>
+                
+                <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+                
+                <style>
+                  /* Estilo para hacer el chatbot responsive */
+                  @media screen and (max-width: 600px) {
+                    div[style^="max-width: 500px; margin: 0 auto;"] {
+                      max-width: 100%;
+                    }
+                  }
+                </style>
+
+                <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+                <script>
+                  setTimeout(function() {
+                    document.querySelector("df-messenger").shadowRoot.querySelector("df-messenger-chat").shadowRoot.querySelector("df-messenger-user-input").shadowRoot.querySelector(".input-box-wrapper > input").placeholder = "Introduce 'Inicio' para reiniciar";
+                  }, 1000);
+                  </script>
+
+                   -->
+      </body>   
+</html>

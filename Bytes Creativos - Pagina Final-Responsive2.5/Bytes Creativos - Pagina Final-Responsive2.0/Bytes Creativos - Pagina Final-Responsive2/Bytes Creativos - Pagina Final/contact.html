@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
+    <link href="./css/contact.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__logo">
+          <a href="index.php">
+            <img src="img/contenido/Logo color.svg" alt="Logo de Bytes">
+          </a>
+        </div>
+        <img src="img/iconos/hamburguesa-azul.png" class="hamburguesa" id="icono" onclick="toggleMenu()" id="iconoHamburguesa">
+        <nav class="header__links">
+            <a href="about.html">Quiénes somos</a>
+            <a href="soluciones.html">Soluciones</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="Asesorias.html">Asesorías</a>
+            <a href="Capacitacion.html">Capacitación</a>
+            <a href="contact.html">Contáctenos</a>
+        </nav>
+        <a href="login.html" class="header__button"> Inicia Sesión</a>
+        <div class="menu" id="menuDesplegable">
+          <img src="img/iconos/close.png" class="cerrar" onclick="toggleMenu()">
+          <a href="about.html"><img src="img/iconos/plus.png" alt="Más" class="icono"> Quiénes somos</a>
+          <a href="soluciones.html"><img src="img/iconos/plus.png" alt="Más" class="icono"> Soluciones</a>
+          <a href="servicios.html"><img src="img/iconos/plus.png" alt="Más" class="icono"> Servicios</a>
+          <a href="Asesorias.html"><img src="img/iconos/plus.png" alt="Más" class="icono"> Asesorías</a>
+          <a href="Capacitacion.html"><img src="img/iconos/plus.png" alt="Más" class="icono"> Capacitación</a>
+          <a href="contact.html"><img src="img/iconos/plus.png" alt="Más" class="icono"> Contáctenos</a>
+          <a href="login.html"> <img src="img/iconos/plus.png" alt ="Más" class="icono">Iniciar Sesión</a>
+        </div>
+      </header>
+    
+    <!-- HeroAbout -->
+    <div class="hero-section">
+        <div class="hero-container">
+            <div class="hero-image"></div>
+            <span class="hero-title">Nuestro equipo</span>
+            <span class="hero-subtitle">de expertos</span>
+            <span class="hero-message">está listo para ayudarte en lo que necesites.</span>
+            <div class="hero-button">Cónoce más...</div>
+            <div class="hero__logo">
+                <img src="img/contenido/logoomnitet.png" alt="Logo de Omnitet">
+            </div>
+        </div>
+    </div>
+
+    <!-- Formulario -->
+    <div class="contact-container">
+        <div class="contact-section">
+            <h2>Formulario de Contacto</h2>
+            <form id="formulario-contacto">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombre">Nombre<span class="required">*</span></label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email<span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="asunto">Asunto<span class="required">*</span></label>
+                        <input type="text" id="asunto" name="asunto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Número de Contacto</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" required></textarea>
+                </div>
+                <button type="submit" id="enviar-formulario">Enviar</button>
+                <div class="form-notificacion"></div>
+            </form>
+        </div>
+        
+        <div class="contact-details-section">
+            <div class="contact-details-container">
+                <h2 class="details-title">Detalles de Contacto</h2>
+                <p class="details-intro">Bienvenido a nuestra sección de contacto. A continuación, encontrarás los detalles de contacto:</p>
+                <div class="details-line"></div>
+                <div class="contact-details">
+                    <div class="details-row">
+                        <div class="details-icon">
+                            <i class='bx bx-phone'></i>
+                        </div>
+                        <div class="details-content">
+                            <h3 class="details-subtitle"> Número de Teléfono</h3>
+                            <p>+123456789</p>
+                            <p>+987654321</p>
+                            <div class="details-line"></div>
+                        </div>
+                    </div>
+                    <div class="details-row">
+                        <div class="details-icon">
+                            <i class='bx bx-envelope'></i>
+                        </div>
+                        <div class="details-content">
+                            <h3 class="details-subtitle"> Correo Electrónico</h3>
+                            <p>ejemplo1@example.com</p>
+                            <p>ejemplo2@example.com</p>
+                            <div class="details-line"></div>
+                        </div>
+                    </div>
+                    <div class="details-row">
+                        <div class="details-icon">
+                            <i class='bx bx-map'></i>
+                        </div>
+                        <div class="details-content">
+                            <h3 class="details-subtitle">Dirección</h3>
+                            <p>Calle Principal, Ciudad</p>
+                            <p>Calle Principal, Ciudad</p>
+                            <div class="details-line"></div>
+                        </div>
+                    </div>
+                    <div class="details-row">
+                        <div class="details-icon-social">
+                        <div class="details-icon"><i class='bx bxl-instagram'></i> <p></p></div>
+                        <div class="details-icon"><i class='bx bxl-youtube'></i> <p></p> </div>
+                        <div class="details-icon"><i class='bx bxl-linkedin'></i> <p></p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mapa -->
+    <div class="map-fondo">
+    <iframe class="map" width="100%" height="380" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-66.84263885021211%2C10.497206155018878%2C-66.84069424867631%2C10.498714697811776&amp;layer=mapnik&amp;marker=10.497960427335315%2C-66.8416665494442"></iframe>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/header-footer.js"></script>
+<script>
+    // Enviar Formulario
+$(document).ready(function() {
+  $('#formulario-contacto').submit(function(e) {
+    e.preventDefault(); // Evita el envío del formulario normalmente
+
+    // Obtén los valores de los campos del formulario
+    var nombre = $('#nombre').val();
+    var email = $('#email').val();
+    var asunto = $('#asunto').val();
+    var telefono = $('#telefono').val();
+    var mensaje = $('#mensaje').val();
+
+    // Envía los datos mediante AJAX a un script PHP
+    $.ajax({
+      type: 'POST',
+      url: 'form-suscribete/enviar_formulario.php', // Archivo PHP donde procesarás el formulario
+      data: {
+        nombre: nombre,
+        email: email,
+        asunto: asunto,
+        telefono: telefono,
+        mensaje: mensaje
+      },
+      success: function(response) {
+        if (response == 'success') {
+          Swal.fire({
+            icon: 'success',
+            title: 'Enviado exitosamente',
+            showConfirmButton: false,
+            timer: 2000
+          }).then(function() {
+            $('#nombre').val('');
+            $('#email').val('');
+            $('#asunto').val('');
+            $('#telefono').val('');
+            $('#mensaje').val('');
+          });
+        } else {
+          $('.form-notificacion').html('<div class="error">Error al enviar el formulario</div>');
+        }
+      }
+    });
+  });
+});
+</script>
+<script src="js/form.js"></script>
+</body>
+</html>

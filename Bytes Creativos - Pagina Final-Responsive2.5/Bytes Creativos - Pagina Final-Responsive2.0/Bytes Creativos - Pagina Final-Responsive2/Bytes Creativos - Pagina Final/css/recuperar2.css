@@ -1,0 +1,173 @@
+
+body {
+margin: 0;
+padding: 0;
+font-family: 'Poppins', sans-serif;
+box-sizing: border-box;
+}
+
+.hero-section {
+overflow: hidden;
+height: 100%;
+width: 100%;
+}
+
+.hero-container {
+position: absolute;
+margin: 0 auto;
+height: 100%;
+width: 100%;
+overflow: hidden;
+display: flex;
+flex-direction: column;
+z-index: 2;
+background: url("../img/contenido/tecnologia4.jpg") center bottom no-repeat;
+background-size: cover;
+}
+
+.hero-image {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 1;
+background-color: #03be8fcb;
+opacity: 0.8; /* Cambio en la opacidad para oscurecer la imagen */
+}
+
+.encabezado_recuperacion {
+padding: 20px;
+position: relative;
+z-index: 1;
+}
+
+.encabezado_recuperacion img {
+width: 250px;
+}
+
+.texto-box {
+text-align: left;
+color: #fff;
+font-size: 65px;
+justify-content: space-around;
+position: absolute;
+line-height: 0.8;
+margin-left: 30px;
+bottom: -50px;
+left: 20px;
+z-index: 1;
+}
+
+.box {
+background-color: #fff;
+border: 1px solid #ccc;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+padding: 20px;
+max-width: 400px;
+text-align: center;
+margin: 0 auto;
+margin-top: 50px;
+margin-left: 800px;
+position: relative;
+z-index: 1;
+}
+
+.box h1 {
+font-size: 24px;
+margin-bottom: 20px;
+}
+
+.input-field {
+position: relative;
+margin-bottom: 20px;
+}
+
+.input-field input {
+width: 95%;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 16px;
+}
+
+.input-field i {
+position: absolute;
+top: 50%;
+right: 10px;
+transform: translateY(-50%);
+}
+
+.submit {
+width: 100%;
+padding: 10px;
+border: none;
+border-radius: 5px;
+background-color: #007bff;
+color: #fff;
+font-size: 16px;
+cursor: pointer;
+}
+
+.two-col {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-top: 20px;
+}
+
+.two-col .one {
+width: 0%;
+height: 1px;
+background-color: #ccc;
+}
+
+.two-col .two {
+font-size: 14px;
+}
+
+.two-col .two a {
+color: #007bff;
+text-decoration: none;
+}
+@media (max-width: 767px) {
+    /* Estilos para pantallas pequeñas */
+  
+    .encabezado_recuperacion {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .encabezado_recuperacion img {
+      max-width: 190px;
+      display: block;
+      margin: 0 auto;
+    }
+  
+    .texto-box {
+      font-size: 40px;
+      line-height: 1;
+      text-align: justify;
+      margin-top: 20px;
+      margin-left: 0;
+      margin-bottom: 105px;
+      margin-top: 0px;
+    }
+    .texto-box h2{
+        font-size: 50px;
+    }
+  
+    .box {
+      margin-left: auto;
+      margin-right: auto;
+      margin-left: 10px; /* Ajusta el margen izquierdo */
+      margin-right: 10px; /* Ajusta el margen derecho */
+      max-width: calc(100% - 20px); /* Resta el doble del margen al ancho máximo */
+      margin-top: 30px;
+    }
+  
+    .box h1 {
+      font-size: 20px;
+    }
+  }

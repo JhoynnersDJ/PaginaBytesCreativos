@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Iniciar sesión</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    $(document).ready(function() {
+        $("form").submit(function(e) {
+            e.preventDefault(); // Evitar el envío del formulario
+
+            // Obtener los valores del formulario
+            var username = $("input[name='username']").val();
+            var password = $("input[name='password']").val();
+
+            // Realizar la solicitud Ajax
+            $.ajax({
+                type: "POST",
+                url: "php/login_process.php",
+                data: { username: username, password: password },
+                success: function(response) {
+                    if (response == "success") {
+                        // Mostrar la notificación de SweetAlert para el inicio de sesión exitoso
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Inicio de sesión exitoso',
+                            text: '¡Bienvenido, ' + username + '!',
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+
+                        // Redireccionar al usuario a indexb.php después de 1.5 segundos
+                        setTimeout(function() {
+                            window.location.href = "indexb.php";
+                        }, 1500);
+                    } else {
+                        // Mostrar la notificación de SweetAlert con el mensaje de error
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error',
+                            text: response
+                        });
+                    }
+                }
+            });
+        });
+    });
+</script>
+</head>
+<body class="register">
+    <!-- Header -->
+    <header class="header">
+        <div class="header__logo">
+          <a href="index.php">
+            <img src="img/contenido/logobytes.png" alt="Logo de Bytes">
+          </a>
+        </div>
+        <nav class="header__links">
+            <a href="about.html">Quiénes somos</a>
+            <a href="soluciones.html">Soluciones</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="Asesorias.html">Asesorías</a>
+            <a href="Capacitacion.html">Capacitación</a>
+            <a href="contact.html">Contáctenos</a>
+        </nav>
+        <a href="login.html" class="header__button"> Inicia Sesión</a>
+      </header>
+
+    <div class="box">
+        <div class="container">
+            <div class="top">
+                <span>¿No tienes una cuenta? <a href="registro.html">Registrate</a></span>
+                <h1>Iniciar sesión</h1>
+            </div>
+            <form>
+                <div class="input-field">
+                    <input type="text" class="input" placeholder="Nombre de usuario" name="username">
+                    <i class='bx bx-user'></i>
+                </div>
+                <div class="input-field">
+                    <input type="password" class="input" placeholder="Contraseña" name="password">
+                    <i class='bx bx-lock-alt'></i>
+                </div>
+                <div class="input-field">
+                    <input type="submit" class="submit" value="Iniciar sesión">
+                </div>
+            </form>
+            <div class="two-col">
+                <div class="one">
+                </div>
+                <div class="two">
+                    <label><a href="recuperacion/recuperar_password.html">¿Olvidaste tu contraseña?</a></label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-container">
+        <div class="footer-content-container">
+            <div class="row">
+                <div class="footer-column footer-logo">
+                    <img src="img/contenido/logobytes.png" alt="Logo de la empresa">
+                </div>
+                <div class="footer-column footer-links">
+                    <ul>
+                        <li><a href="#">Quienes somos</a></li>
+                        <li><a href="#">Soluciones</a></li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="#">Asesoría</a></li>
+                        <li><a href="#">Capacitación</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column footer-contact-info">
+                    <p>Av. Rómulo Gallegos, Ed. Pascal, Las Mercedes, Cachao, Caracas - Venezuela</p>
+                    <p>info@bytescreativos.net</p>
+                    <p>+58 (0424) 186.4951</p>
+                    <p>+58 (0212) 314.3265</p>
+                </div>
+                <div class="footer-column footer-sponsor-image">
+                    <img src="img/contenido/logoomnitet.png" alt="Imagen de la empresa">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

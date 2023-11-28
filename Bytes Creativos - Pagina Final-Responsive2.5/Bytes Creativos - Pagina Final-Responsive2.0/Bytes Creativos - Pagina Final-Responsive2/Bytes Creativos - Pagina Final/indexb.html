@@ -1,0 +1,484 @@
+<?php
+session_start(); // Iniciar sesión
+
+if (isset($_SESSION['username'])) {
+    $username = $_SESSION['username'];
+} else {
+    header("Location: index.php"); // Redirigir al usuario a index.php
+    exit(); // Asegurarse de que el código siguiente no se ejecute una vez redirigido
+}
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link href="./css/main.css" rel="stylesheet" />
+        <title>Bytes Creativos</title>
+    </head>
+    <body>
+<!-- Header -->
+<header class="header">
+    <div class="header__logo">
+        <a href="index.php">
+            <img src="img/contenido/logobytes.png" alt="Logo de Bytes">
+        </a>
+        
+    </div>
+    <nav class="header__links">
+        <a href="about.html">Quiénes somos</a>
+        <a href="soluciones.html">Soluciones</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="Asesorias.html">Asesorías</a>
+        <a href="Capacitacion.html">Capacitación</a>
+        <a href="contact.html">Contáctenos</a>
+    </nav>
+    <div class="user-menu">
+      <span class="username-text" id="username">Heraldsito<?php echo $username; ?></span>
+      <i class="header__icon bx bx-user" id="user-icon"></i>
+      <ul class="user-menu__list" id="user-menu-list">
+        <li><a href="cambio/cambiar_password.html">Cambiar contraseña</a></li>
+        <li><a href="php/logout.php"> Cerrar sesión</a></li>
+      </ul>
+  </div>
+  <img src="img/iconos/hamburguesa.png" class="hamburguesa indexb" id="icono" onclick="toggleMenu()" id="iconoHamburguesa">
+  <div class="menu" id="menuDesplegable">
+    <img src="img/iconos/close.png" class="cerrar" onclick="toggleMenu()">
+    <a href="about.html"><img src="img/iconos/plus.png" alt="Más" class="icono"> Quiénes somos</a>
+    <a href="soluciones.html"><img src="img/iconos/plus.png" alt="Más" class="icono"> Soluciones</a>
+    <a href="servicios.html"><img src="img/iconos/plus.png" alt="Más" class="icono"> Servicios</a>
+    <a href="Asesorias.html"><img src="img/iconos/plus.png" alt="Más" class="icono"> Asesorías</a>
+    <a href="Capacitacion.html"><img src="img/iconos/plus.png" alt="Más" class="icono"> Capacitación</a>
+    <a href="contact.html"><img src="img/iconos/plus.png" alt="Más" class="icono"> Contáctenos</a>
+    <a href="cambio/cambiar_password.html"><img src="img/iconos/plus.png" alt="Más" class="icono">Cambiar contraseña</a>
+    <a href="php/logout.php"><img src="img/iconos/plus.png" alt="Más" class="icono">Cerrar sesión
+    <span class="username-text" id="username">Heraldsito</span>
+    </a>
+  </div>
+</header>
+
+
+
+      
+      
+          <!-- Hero -->
+          <div class="hero-section">
+            <div class="hero-container">
+              <div class="hero-image"></div>
+              <span class="hero-title">Un mundo</span>
+              <span class="hero-subtitle">de soluciones</span>
+              <span class="hero-message">Hacemos que la tecnología sea un potenciador del negocio</span>
+              <div class="hero-button">Cónoce más...</div>
+              <div class="hero__logo">
+                <img src="img/contenido/logoomnitet.png" alt="Logo de Omnitet">
+              </div>
+            </div>
+          </div>
+      <!-- Tarjetas de Ventajas -->
+<div class="card-section">  
+  <div class="card-container">
+    <div class=" col-md-4 col-sm-6 col-xs-12 card">
+      <div class="card-front">
+        <i class="fas fa-cog"></i>
+        <img src="img/iconos/icono-cyberseguridad.svg" alt="Imagen de Cyberseguridad">
+        <h3>Cyberseguridad</h3>
+      </div>
+      <div class="card-back">
+        <p>Texto sobre Cyberseguridad</p>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12 card">
+      <div class="card-front">
+        <i class="fas fa-book"></i>
+        <img src="img/iconos/icono-cursos y talleres.svg" alt="Imagen de Cursos y Talleres">
+        <h3>Cursos y Talleres</h3>
+      </div>
+      <div class="card-back">
+        <p>Texto sobre Cursos y Talleres</p>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12 card">
+      <div class="card-front">
+        <i class="fas fa-laptop"></i>
+        <img src="img/iconos/icono-procesador.svg" alt="Imagen de Tecnología">
+        <h3>Tecnología</h3>
+      </div>
+      <div class="card-back">
+        <p>Texto sobre Tecnología</p>
+      </div>
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12 card">
+      <div class="card-front">
+        <i class="fas fa-chart-bar"></i>
+        <img src="img/iconos/icono-test.svg" alt="Imagen de Test y Análisis">
+        <h3>Test y Análisis</h3>
+      </div>
+      <div class="card-back">
+        <p>Texto sobre Test y Análisis</p>
+      </div>
+    </div>
+  </div>
+</div>
+             <!-- Resumen -->
+             <div class="resumen">
+              <div class="texto" id="resumenanimar">
+                <h2>Ofrecemos soluciones</h2>
+                <h3>tecnológicas integrales</h3>
+                <p>Somos una compañía de Servicios y Soluciones Tecnológicas, con más de 25 años de trayectoria en el mercado venezolano, Latinoamericano y el Caribe</p>
+                <button>Cónoce más.</button>
+              </div>
+              <div class="imagen" id="animarimagenresumen" >
+                <img src="img/contenido/resumen.png" alt="Imagen">
+              </div>
+            </div>                       
+  <!-- Herramientas -->
+
+  <section class="tool-section" id="carousel-section">
+    <div class="container">
+      <div class="title">
+        <h2>Siempre listos</h2>
+        <h3>para los desafios</h3>
+      </div>
+      <div class="carousel-container">
+        <div class="carousel">
+          <a href="soluciones.html">
+          <div class="carousel-item">
+            <div class="fondoazul">
+              <img src="img/carrusel/imagen_1.png" alt="Imagen 1">
+            </div>
+          </a>
+            <div class="description">
+              <h4>Descripción de la imagen 1</h4>
+              <p>Texto explicativo de la imagen 1</p>
+            </div>
+            <div class="service">
+              <h5>Instalación/Upgrade</h5>
+            </div>
+          </a>
+          </div>
+                    <a href="soluciones.html">
+          <div class="carousel-item">
+            <div class="fondoazul">
+              <img src="img/carrusel/imagen_2.png" alt="Imagen 2">
+            </div>
+            </a>
+            <div class="description">
+              <h4>Descripción de la imagen 2</h4>
+              <p>Texto explicativo de la imagen 2</p>
+            </div>
+            <div class="service">
+              <h5>MIMIX Share</h5>
+            </div>
+          </div>
+                    <a href="soluciones.html">
+          <div class="carousel-item">
+            <div class="fondoazul">
+              <img src="img/carrusel/imagen_3.png" alt="Imagen 3">
+            </div>
+            </a>
+            <div class="description">
+              <h4>Descripción de la imagen 3</h4>
+              <p>Texto explicativo de la imagen 3</p>
+            </div>
+            <div class="service">
+              <h5>GoAnywhere MFT</h5>
+            </div>
+          </div>
+                    <a href="soluciones.html">
+          <div class="carousel-item">
+            <div class="fondoazul">
+              <img src="img/carrusel/imagen_4.png" alt="Imagen 4">
+            </div>
+            </a>
+            <div class="description">
+              <h4>Descripción de la imagen 4</h4>
+              <p>Texto explicativo de la imagen 4</p>
+            </div>
+            <div class="service">
+              <h5>CRYPTO COMPLETE</h5>
+            </div>
+          </div>
+                    <a href="soluciones.html">
+          <div class="carousel-item">
+            <div class="fondoazul">
+              <img src="img/carrusel/imagen_3.png" alt="Imagen 3">
+            </div>
+            </a>
+            <div class="description">
+              <h4>Descripción de la imagen 3</h4>
+              <p>Texto explicativo de la imagen 3</p>
+            </div>
+            <div class="service">
+              <h5>X-Analysis Advisor</h5>
+            </div>
+          </div>
+                    <a href="soluciones.html">
+          <div class="carousel-item">
+            <div class="fondoazul">
+              <img src="img/carrusel/imagen_3.png" alt="Imagen 3">
+            </div>
+            </a>
+            <div class="description">
+              <h4>Descripción de la imagen 3</h4>
+              <p>Texto explicativo de la imagen 3</p>
+            </div>
+            <div class="service">
+              <h5>Spool Mail</h5>
+            </div>
+          </div>
+                    <a href="soluciones.html">
+          <div class="carousel-item">
+            <div class="fondoazul">
+              <img src="img/carrusel/imagen_3.png" alt="Imagen 3">
+            </div>
+            </a>
+            <div class="description">
+              <h4>Descripción de la imagen 3</h4>
+              <p>Texto explicativo de la imagen 3</p>
+            </div>
+            <div class="service">
+              <h5>Datamaker™</h5>
+            </div>
+          </div>
+                    <a href="soluciones.html">
+          <div class="carousel-item">
+            <div class="fondoazul">
+              <img src="img/carrusel/imagen_3.png" alt="Imagen 3">
+            </div>
+            </a>
+            <div class="description">
+              <h4>Descripción de la imagen 3</h4>
+              <p>Texto explicativo de la imagen 3</p>
+            </div>
+            <div class="service">
+              <h5>TD / OMS</h5>
+            </div>
+          </div>
+                    <a href="soluciones.html">
+          <div class="carousel-item">
+            <div class="fondoazul">
+              <img src="img/carrusel/imagen_3.png" alt="Imagen 9">
+            </div>
+            </a>
+            <div class="description">
+              <h4>Descripción de la imagen 3</h4>
+              <p>Texto explicativo de la imagen 3</p>
+            </div>
+            <div class="service">
+              <h5>ZABBIX-Grafana</h5>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button class="prev"></button>
+          <button class="next"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="parallax">
+    <div class="parallax-bg"></div>
+    <div class="parallax-content">
+      <h2>Desarrollamos soluciones</h2>
+      <h3>tecnológicas para empresas</h3>
+      <div class="columns">
+        <div class="column">
+          <div class="counter" data-count="95">0</div>
+          <h4>Herramientas de replicación</h4>
+        </div>
+        <div class="column">
+          <div class="counter" data-count="99">0</div>
+          <h4>Herramientas de productividad</h4>
+        </div>
+        <div class="column">
+          <div class="counter" data-count="90">0</div>
+          <h4>Análisis de aplicaciones</h4>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="grid-razones">
+    <h2 class="section-title">Razones por las cuales</h2>
+    <h3 class="section-subtitle">nuestros clientes nos eligen</h3>
+    <div class="grid-container">
+      <div class="grid-item">
+        <img src="img/iconos/candado.svg" alt="Imagen 1">
+        <h4>Ofrecemos confianza</h4>
+        <h5>Subtítulo de la imagen 1</h5>
+      </div>
+      <div class="grid-item">
+        <img src="img/iconos/personas.svg" alt="Imagen 2">
+        <h4>Experiencia y acompañamiento en la asesoría de diagnóstico integral</h4>
+        <h5>Subtítulo de la imagen 2</h5>
+      </div>
+      <div class="grid-item">
+        <img src="img/iconos/cursos.svg" alt="Imagen 3">
+        <h4>Experticia</h4>
+        <h5>Subtítulo de la imagen 3</h5>
+      </div>
+    </div>
+    <div class="grid-container">
+      <div class="grid-item">
+        <img src="img/iconos/mantenimiento.svg" alt="Imagen 1">
+        <h4>Adaptabilidad</h4>
+        <h5>Subtítulo de la imagen 1</h5>
+      </div>
+      <div class="grid-item">
+        <img src="img/iconos/nube.svg" alt="Imagen 2">
+        <h4>Servicio de calidad ininterrumpida las 24 horas los 7 días a la semana y los 365 al año.</h4>
+        <h5>Subtítulo de la imagen 2</h5>
+      </div>
+      <div class="grid-item">
+        <img src="img/iconos/documento.svg" alt="Imagen 3">
+        <h4>Nos ajustamos a tu presupuesto.</h4>
+        <h5>Subtítulo de la imagen 3</h5>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coa -->
+  <section class="call-to-action">
+    <div class="container-coa">
+      <h2>Nos motiva el deseo</h2>
+      <h3>de superar nuestros retos</h3>
+      <p>Descripción o texto adicional sobre la acción que se debe tomar.</p>
+      <a href="#" class="btn-coa">Conoce más...</a>
+    </div>
+    <div class="fondoazul2"></div>
+  </section>
+<!-- Ofrecemos -->
+<section class="edinson">
+  <div class="image-row">
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+      <div class="imagen-container-ofrecemos">
+        <img class="imagen-ofrecemos" src="img/contenido/edinson.png" alt="Imagen 1">
+        <div class="capa-color-azul"></div>
+        <div class="informacion-accion-azul">
+          <p>Hacemos que la tecnología sea un potenciador del negocio de nuestros clientes</p>
+        </div>
+        <div class="ofrecemos">
+          <h5>Soluciones tecnológicas</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+      <div class="imagen-container-ofrecemos">
+        <img class="imagen-ofrecemos" src="img/contenido/nest.png" alt="Imagen 2">
+        <div class="capa-color-turquesa"></div>
+        <div class="informacion-accion-turquesa">
+          <p>Ofrecemos soluciones para que solo se dedique a su negocio y deje el resto en nuestras manos</p>
+        </div>
+        <div class="ofrecemos">
+          <h5>Asesorías</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+      <div class="imagen-container-ofrecemos">
+        <img class="imagen-ofrecemos" src="img/contenido/cursogan.png" alt="Imagen 3">
+        <div class="capa-color-verde"></div>
+        <div class="informacion-accion-verde">
+          <p>Nuestras esquemas de capacitación pueden ser online o presenciales</p>
+        </div>
+        
+        <div class="ofrecemos">
+          <h5>Capacitación</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+                <!-- Footer -->
+                <footer class="footer-container">
+                  <div class="footer-content-container">
+                    <div class="row">
+                      <div class="footer-column footer-logo">
+                        <a href="index.php">
+                          <img src="img/contenido/logobytes.png" alt="Logo de la empresa">
+                        </a>
+                      </div>
+                      <div class="footer-column footer-links">
+                        <ul>
+                          <li><a href="about.html">Quienes somos</a></li>
+                          <li><a href="soluciones.html">Soluciones</a></li>
+                          <li><a href="#">Servicios</a></li>
+                          <li><a href="#">Asesoría</a></li>
+                          <li><a href="#">Capacitación</a></li>
+                          <li><a href="contact.html">Contacto</a></li>
+                        </ul>
+                      </div>
+                      <div class="footer-column footer-contact-info">
+                        <p>Av. Rómulo Gallegos, Ed. Pascal, Las Mercedes, Cachao, Caracas - Venezuela</p>
+                        <p>info@bytescreativos.net</p>
+                        <p>+58 (0424) 186.4951</p>
+                        <p>+58 (0212) 314.3265</p>
+                      </div>
+                      <div class="footer-column footer-sponsor-image">
+                        <img src="img/contenido/logoomnitet.png" alt="Imagen de la empresa">
+                      </div>
+                    </div>
+                  </div>
+                </footer>
+                
+                <!-- JavaScript -->
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <script src="js/header-footer.js"></script>
+                <script src="js/index.js"></script>
+                <script src="js/"></script>
+
+                <!-- 
+
+                  Bot
+                <script>
+                  //To minimise the height of chatbox
+                  $(document).ready(function() {
+                      window.addEventListener('dfMessengerLoaded', function (event) {
+                      $r1 = document.querySelector("df-messenger");
+                      $r2 = $r1.shadowRoot.querySelector("df-messenger-chat");
+                      $r3 = $r2.shadowRoot.querySelector("df-messenger-user-input"); //for other mods
+                      var sheet = new CSSStyleSheet;
+                      // manage box height from here
+                      sheet.replaceSync( `div.chat-wrapper[opened="true"] { height: 450px }`);
+                      $r2.shadowRoot.adoptedStyleSheets = [ sheet ];
+                      });
+                  });
+              </script>
+
+                <div style="max-width: 510px; margin: 0 auto;">
+                  <df-messenger
+                    intent="Soporte"
+                    chat-title="AntQueen_Prueba"
+                    agent-id="8403c874-a56b-421e-ab1a-247989be63e9"
+                    language-code="es"
+                    chat-icon="https://galsecure.com/img/Hormiga%20blanca.png"
+                  ></df-messenger>
+                </div>
+                
+                <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+                
+                <style>
+                  /* Estilo para hacer el chatbot responsive */
+                  @media screen and (max-width: 600px) {
+                    div[style^="max-width: 500px; margin: 0 auto;"] {
+                      max-width: 100%;
+                    }
+                  }
+                </style>
+
+                <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+                <script>
+                  setTimeout(function() {
+                    document.querySelector("df-messenger").shadowRoot.querySelector("df-messenger-chat").shadowRoot.querySelector("df-messenger-user-input").shadowRoot.querySelector(".input-box-wrapper > input").placeholder = "Introduce 'Inicio' para reiniciar";
+                  }, 1000);
+                  </script>
+
+                   -->
+            </body>
+        </html>

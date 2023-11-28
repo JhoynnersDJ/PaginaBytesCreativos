@@ -1,0 +1,429 @@
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  transition: height 0.3s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: transparent; /* cambiar el color de fondo a transparente */
+  z-index: 50; /* agregar un índice z alto para que el header aparezca por encima de las demás secciones */
+  border-bottom: 0.5px solid #ffffff1e; /* Agrega una línea horizontal de 1 píxel de ancho y color gris */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Agrega una sombra de 1px de desplazamiento vertical, 2px de difuminado y opacidad del 20% */
+}
+
+.header.transparent {
+  background-color: transparent;
+  color: #fff;
+}
+
+.header.white {
+  background-color: #fff;
+  color: #000;
+}
+
+.header.white .header__links a::before,
+.header.white .header__links a::after {
+  background-color: #000;
+}
+
+.header.transparent .header__links a::before,
+.header.transparent .header__links a::after {
+  background-color: #fff;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo img {
+  margin-left: 62px;
+  height: 63px;
+  margin-right: 20px;
+}
+
+.header__links {
+  position: relative;
+  margin-left: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.header__links a {
+  margin-right: 20px;
+  color: inherit;
+  font-family: Poppins;
+  font-weight: Regular;
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+  position: relative; /* Agregar posición relativa para permitir la posición absoluta de los pseudo-elementos */
+}
+
+.header__links button {
+  margin-right: 20px;
+  color: inherit;
+  font-family: Poppins;
+  font-weight: Regular;
+  font-size: 16px;
+  background-color: #ffffff00;
+  border: none;
+  text-decoration: none;
+  color: #fff;
+  position: relative; /* Agregar posición relativa para permitir la posición absoluta de los pseudo-elementos */
+}
+
+.header__button {
+  width: 150px; /* Incrementa el ancho del botón */
+  height: 40px; /* Incrementa la altura del botón */
+  background-color: rgba(82, 176, 83, 1);
+  color: #fff;
+  font-size: 20px;
+  border-radius: 7px;
+  text-align: center;
+  line-height: 40px; /* Ajusta la altura de línea para centrar el texto verticalmente */
+  margin-right: 20px; /* Aumenta el margen derecho para separarlo del resto de los enlaces */
+  display: flex;
+  text-decoration: none;
+  justify-content: center; /* Centra el contenido horizontalmente */
+}
+
+/* Usuario */
+.username-text {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.header__icon {
+  color: #fff;
+  font-size: 25px;
+  margin-right: 20px;
+}
+
+/* Agrega estilos para el menú de usuario */
+.user-menu {
+  position: relative;
+}
+
+.username-text {
+  display: inline-block;
+  margin-right: 5px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.header.sticky .username-text {
+  color: #0396D6;
+}
+
+.header__icon {
+  display: inline-block;
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.header.sticky .header__icon {
+  color: #0396D6;
+}
+
+.user-menu__list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 150px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.user-menu__list li {
+  margin-bottom: 10px;
+}
+
+.user-menu__list li a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+
+
+/* Muestra el menú de usuario al hacer clic en el nombre de usuario o en el icono */
+.user-menu:hover .user-menu__list {
+  display: block;
+}
+    /* Animacion */
+    .header__links a:hover {
+      text-decoration: none; /* Eliminar la decoración de texto por defecto */
+    }
+    
+    .header__links a:hover::before,
+    .header__links a:hover::after {
+      width: 100%; /* Anima el ancho de los pseudo-elementos para que la línea se extienda */
+    }
+    
+    .header__links a::before,
+    .header__links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; /* Colocar los pseudo-elementos por debajo del enlace */
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: #ffffff;
+      transition: all 0.3s ease-in-out;
+    }
+    
+    .header.sticky {
+      background-color: #fff;
+      color: #000;
+    }
+    
+    .header.sticky .header__logo img {
+      content: url('../img/contenido/Logo\ color.svg');
+    }
+
+    /* Sticky Hamburguesa */
+
+    .header.sticky .hamburguesa{
+      content: url('../img/iconos/hamburguesa-azul.png');
+    }
+
+    
+    .header.sticky .header__links a {
+      color: #0396D6;
+    }
+
+    .header.sticky .header__links button{
+      color: #0396D6;
+    }
+    
+    /* Efecto hover cuando el header está blanco */
+    .header.sticky .header__links a:hover::before,
+    .header.sticky .header__links a:hover::after {
+      background-color: #0396D6;
+    }
+    
+    /* Efecto hover cuando el header es transparente */
+    .header:not(.sticky) .header__links a:hover::before,
+    .header:not(.sticky) .header__links a:hover::after {
+      background-color: #fff;
+    }
+
+    .header.scroll {
+      height: 80px; /* Cambia la altura del header a 80px */
+    }
+
+    .header__button:hover{
+      background-color: rgb(108, 192, 109)
+    }
+
+    .header__toggle-btn {
+      display: none; /* Ocultar el botón en pantallas grandes */
+    }
+
+    /* Hamburguesa */
+
+      /* Estilos para el ícono de la hamburguesa y la equis */
+  .hamburguesa {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    display: none;  /* Ocultar por defecto en pantallas grandes */
+  }
+
+  .hamburguesa.rotada {
+    transform: rotate(45deg);
+  }
+
+
+  /* Estilos para el menú desplegable */
+  .menu {
+    opacity: 0;
+    position: absolute;
+    top: 32px; /* Posición inicial con margen superior */
+    left: 30px; /* Posición inicial con margen izquierdo */
+    color: white;
+    transition: opacity 0.3s, transform 0.3s;
+    transform: translateY(-100%); /* Desplazado inicialmente fuera de la pantalla */
+  }
+  .menu.mostrado {
+    opacity: 1;
+    transform: translateY(0); /* Desplazamiento hacia abajo */
+    color: #fff;
+    z-index: 100;
+  }
+  .menu-user{
+      display: none;
+      position: absolute;
+      top: 32px; /* Posición inicial con margen superior */
+      left: 30px; /* Posición inicial con margen izquierdo */
+      color: white;
+      transition: opacity 0.3s, transform 0.3s;
+      transform: translateY(-100%); /* Desplazado inicialmente fuera de la pantalla */
+  }
+
+  .menu-user.mostrado{
+  opacity: 0;
+  transform: translateY(0); /* Desplazamiento hacia abajo */
+  color: #fff;
+  z-index: 100;
+  }
+  .cerrar {
+    position: absolute;
+    top: 10px;
+    left: 90%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+/* MediaQuery */
+/* Estilos para pantallas pequeñas */
+      
+@media (max-width: 768px) {
+
+  *{
+    padding: 0;
+    margin: 0;
+  }
+
+  /*HAMBURGUESA*/
+  .header__links {
+    display: none; /* Ocultar los enlaces principales en pantallas pequeñas */
+    top: 100px;
+    height: 90%;
+  }
+  .menu{
+    position: fixed;
+    height: 63%;
+    width: 85%;
+    background-color: white; /* Cambiar el color de fondo a blanco */
+    padding: 20px; /* Agregar un relleno alrededor del contenido del menú */
+    padding-bottom: 15px;
+    padding-top: 22px;
+    overflow-y: auto; /* Agregar una barra de desplazamiento vertical si el contenido excede la altura del menú */
+  }
+  .menu a {
+    display: block; /* Hacer que los enlaces sean elementos de bloque */
+    margin-bottom: 10px; /* Agregar un espacio entre cada enlace */
+    padding-bottom: 10px; /* Agregar un espacio adicional debajo de cada enlace */
+    border-bottom: 1px solid #ddd; /* Agregar una línea inferior a cada enlace */
+    color: black; /* Cambiar el color del texto de los enlaces */
+    text-decoration: none; /* Quitar la decoración de subrayado de los enlaces */
+    display: flex;
+    align-items: center;
+  }
+  .menu a:hover {
+    background-color: #f0f0f0; /* Cambiar el color de fondo al pasar el cursor sobre los enlaces */
+  }
+  .menu a img {
+    width: 12px; /* Ajustar el ancho de la imagen del signo más */
+    margin-right: 5px; /* Agregar un margen a la derecha del signo más */
+  }
+   .menu .icono {
+    float: right;
+    margin-left: 5px; /* Espacio entre el texto y la imagen */
+  }
+  #menuDesplegable{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #menuDesplegableUser{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .hamburguesa.rotada{
+    display: none ;
+  }
+  #icono{
+    transition: all 0.3s ease;
+  }
+
+  #icono.scroll {
+    display: none; /* Ocultar el icono original después del scroll */
+  }
+
+.header.scroll{
+  height: 100px;
+}
+  .header__toggle-btn {
+    display: block; /* Mostrar el botón en pantallas pequeñas */
+    background-color: rgba(82, 176, 83, 1);
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-radius: 7px;
+    text-align: center;
+    line-height: 40px;
+    width: 150px;
+    height: 40px;
+    margin-right: 20px;
+  }
+
+  .header.scroll .header__toggle-btn {
+    background-color: rgb(108, 192, 109);
+  }
+    .hamburguesa {
+      display: inline-block; /* Mostrar solo en pantallas pequeñas */
+    }
+    .header__button {
+      display: none;
+    }
+    .header {
+      overflow: hidden; /* Evita el desbordamiento horizontal */
+    }
+
+    .header__logo img {
+      margin-left: 10px; /* Ajusta el margen izquierdo según sea necesario */
+      height: 55px;
+    }
+
+    .header__links {
+      display: none; /* Oculta los enlaces del header */
+    }
+
+    .header__button {
+      display: none; /* Oculta el botón de inicio de sesión */
+    }
+    .header{
+      max-width: 100%;    
+    }
+    /*ICONO USER*/
+    .username-text{
+      display: block;
+    }
+    .header__icon {
+      font-size: 35px; 
+      position: relative;
+      left: 0;    
+    }
+    .hamburguesa.indexb{
+      position: relative;
+      right: 3px;
+    }
+    .user-menu__list{
+      position: absolute;
+      width: 130px;
+      height: 200px;
+        }
+        .user-menu{
+          display: none;
+        }
+  }

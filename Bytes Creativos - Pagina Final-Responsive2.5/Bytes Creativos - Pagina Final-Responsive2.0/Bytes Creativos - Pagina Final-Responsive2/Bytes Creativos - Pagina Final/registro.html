@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/registro.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.css" />
+    <title>Registro</title>
+</head>
+<body class="register">
+    <!-- Header -->
+    <header class="header">
+        <div class="header__logo">
+          <a href="index.php">
+            <img src="img/contenido/logobytes.png" alt="Logo de Bytes">
+          </a>
+        </div>
+        <nav class="header__links">
+            <a href="about.html">Quiénes somos</a>
+            <a href="soluciones.html">Soluciones</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="Asesorias.html">Asesorías</a>
+            <a href="Capacitacion.html">Capacitación</a>
+            <a href="contact.html">Contáctenos</a>
+        </nav>
+        <a href="login.html" class="header__button"> Inicia Sesión</a>
+      </header>
+
+    <div class="box">
+        <div class="container">
+            <div class="top">
+                <h1>Registrate</h1>
+            </div>
+            <form id="registro-form">
+                <div class="input-field">
+                    <input type="text" class="input" placeholder="Nombre y Apellido" name="nombre">
+                    <i class='bx bx-user'></i>
+                </div>
+                <div class="input-field">
+                    <input type="text" class="input" placeholder="Usuario" name="username">
+                    <i class='bx bx-user'></i>
+                </div>
+                <div class="input-field">
+                    <input type="email" class="input" placeholder="Correo Electrónico" name="correo">
+                    <i class='bx bx-envelope'></i>
+                </div>
+                <div class="input-field">
+                    <input type="password" class="input" placeholder="Contraseña" name="password">
+                    <i class='bx bx-lock-alt'></i>
+                    <input type="password" class="input" placeholder="Confirmar Contraseña" name="confirmar_password">
+                    <i class='bx bx-lock-alt'></i>
+                </div>
+                <div class="input-field">
+                    <input type="submit" class="submit" value="Registrarse">
+                </div>
+            </form>
+            <div class="two-col">
+                <div class="one">
+                </div>
+                <div class="two">
+                    <label><span>¿Ya tienes una cuenta?</span> <a href="login.html">Inicia Sesión</a></label>
+                </div>
+            </div>
+        </div>
+    </div>
+                    <!-- Footer -->
+                    <footer class="footer-container">
+                        <div class="footer-content-container">
+                          <div class="row">
+                            <div class="footer-column footer-logo">
+                              <img src="img/contenido/logobytes.png" alt="Logo de la empresa">
+                            </div>
+                            <div class="footer-column footer-links">
+                              <ul>
+                                <li><a href="#">Quienes somos</a></li>
+                                <li><a href="#">Soluciones</a></li>
+                                <li><a href="#">Servicios</a></li>
+                                <li><a href="#">Asesoría</a></li>
+                                <li><a href="#">Capacitación</a></li>
+                                <li><a href="#">Contacto</a></li>
+                              </ul>
+                            </div>
+                            <div class="footer-column footer-contact-info">
+                              <p>Av. Rómulo Gallegos, Ed. Pascal, Las Mercedes, Cachao, Caracas - Venezuela</p>
+                              <p>info@bytescreativos.net</p>
+                              <p>+58 (0424) 186.4951</p>
+                              <p>+58 (0212) 314.3265</p>
+                            </div>
+                            <div class="footer-column footer-sponsor-image">
+                              <img src="img/contenido/logoomnitet.png" alt="Imagen de la empresa">
+                            </div>
+                          </div>
+                        </div>
+                      </footer>
+                      
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="js/header-footer.js"></script>
+    <script src="js/registro.js"></script>
+</body>
+</html>

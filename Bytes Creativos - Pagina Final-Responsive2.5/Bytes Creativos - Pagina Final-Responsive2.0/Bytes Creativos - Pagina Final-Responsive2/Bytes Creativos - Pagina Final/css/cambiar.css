@@ -1,0 +1,209 @@
+
+  @import url(footer.css);
+    
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    }
+
+    .hero-section {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    }
+
+    .hero-container {
+    position: absolute;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    background: url("../img/contenido/tecnologia4.jpg") center bottom no-repeat;
+    background-size: cover;
+    }
+
+    .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: #0397d6ea;
+    opacity: 0.8; /* Cambio en la opacidad para oscurecer la imagen */
+    }
+
+    .encabezado_recuperacion {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    }
+
+    .encabezado_recuperacion img {
+    width: 250px;
+    }
+
+    .texto-box {
+    text-align: left;
+    color: #ffffff00;
+    font-size: 50px;
+    justify-content: space-around;
+    position: absolute;
+    line-height: 0.8;
+    margin-left: 30px;
+    margin-top: -40px;
+    left: 800px;
+    z-index: 1;
+    }
+
+    .box {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    position: relative;
+    z-index: 1;
+    }
+
+    .box h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    }
+
+    .input-field {
+    position: relative;
+    margin-bottom: 20px;
+    }
+
+    .input-field input {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    }
+
+    .input-field i {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    }
+
+    .submit {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    }
+
+    .two-col {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    }
+
+    .two-col .one {
+    width: 16%;
+    height: 1px;
+    background-color: #ccc;
+    }
+
+    .two-col .two {
+    font-size: 14px;
+    }
+
+    .two-col .two a {
+    color: #007bff;
+    text-decoration: none;
+    }
+
+    /* Nuevos estilos para pantallas pequeñas */
+    @media (max-width: 768px) {
+
+    .hero-container {
+      align-items: center;
+      text-align: center;
+    }
+  
+    .texto-box {
+      font-size: 30px;
+      margin: 0;
+      line-height: 1;
+      left: 0;
+      right: 0;
+    }
+  
+    .box {
+      margin-top: 20px;
+      max-width: 80%;
+      margin-bottom: 20px;
+    }
+  
+    .two-col {
+      flex-direction: column;
+      margin-top: 10px;
+    }
+  
+    .two-col .one {
+      width: 100%;
+      height: 1px;
+      margin-bottom: 10px;
+    }
+  
+    .two-col .two {
+      text-align: center;
+    }
+    .encabezado_recuperacion {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+      position: relative;
+      z-index: 1;
+    }
+    .encabezado_recuperacion .logo img {
+      max-width: 800px; /* Ajusta el tamaño según tus preferencias */
+      max-height: 100px; /* Ajusta el tamaño según tus preferencias */
+    }
+  }
+   /*Responsive Landscape*/
+@media (max-width: 768px) and (orientation: landscape) {
+  .box{
+    position: relative;
+    bottom: 150px;
+    left: 150px;
+    width: 45%;
+    height: 90%;
+    margin-top: 50px;
+    padding-top: 0;
+  }
+  .input-field{
+    margin-bottom: 10px;
+  }
+  .top h1{
+    font-size: 20px;
+  }
+  .encabezado_recuperacion{
+    position: relative;
+    right: 160px;
+  }
+  .encabezado_recuperacion img{
+    width: 35%;
+  }
+}
